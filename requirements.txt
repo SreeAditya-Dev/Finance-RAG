@@ -1,0 +1,14 @@
+langchain
+langchain-community
+langchain-openai
+chromadb
+pypdf
+streamlit
+python-dotenv
+openai
+tiktoken
+# Optional bonuses
+fastapi
+uvicorn
+python-multipart
+yfinance
