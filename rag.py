@@ -8,7 +8,7 @@ load_dotenv()
 
 CHROMA_DB_DIR = "chroma_db"
 
-def get_answer(query: str, persist_directory: str = CHROMA_DB_DIR, top_k: int = 4):
+def get_answer(query: str, persist_directory: str = CHROMA_DB_DIR, top_k: int = 20):
     """
     Retrieves the most relevant chunks for a given query from ChromaDB 
     and uses GPT-4o to generate a response.
@@ -54,7 +54,7 @@ def get_answer(query: str, persist_directory: str = CHROMA_DB_DIR, top_k: int = 
             unique_sources.append(s)
 
     # 4. Set up the LLM (NVIDIA NIM Llama-3.1-70B) and System Prompt
-    llm = ChatNVIDIA(model="meta/llama-3.1-70b-instruct", temperature=0.1)
+    llm = ChatNVIDIA(model="meta/llama-3.1-70b-instruct", temperature=0.1, timeout=120)
 
     system_prompt = (
         "You are an assistant for a research desk of an investment advisory firm.\n"
@@ -82,7 +82,7 @@ def get_answer(query: str, persist_directory: str = CHROMA_DB_DIR, top_k: int = 
 
 if __name__ == "__main__":
     # Small test script (will only work if ChromaDB has data)
-    test_q = "What was total revenue in the most recent quarter?"
+    test_q = "Compare net profit across all the quarters you loaded. Which was highest?"
     print(f"Question: {test_q}\n")
     res = get_answer(test_q)
     print("Answer:")
