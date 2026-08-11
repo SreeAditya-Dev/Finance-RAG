@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_nvidia_ai_endpoints import ChatNVIDIA, NVIDIAEmbeddings
 from langchain_chroma import Chroma
 from langchain_core.prompts import ChatPromptTemplate
 
@@ -53,8 +53,8 @@ def get_answer(query: str, persist_directory: str = CHROMA_DB_DIR, top_k: int = 
         if s not in unique_sources:
             unique_sources.append(s)
 
-    # 4. Set up the LLM (GPT-4o) and System Prompt
-    llm = ChatOpenAI(model="gpt-4o", temperature=0.1)
+    # 4. Set up the LLM (NVIDIA NIM Llama-3.1-70B) and System Prompt
+    llm = ChatNVIDIA(model="meta/llama-3.1-70b-instruct", temperature=0.1)
 
     system_prompt = (
         "You are an assistant for a research desk of an investment advisory firm.\n"
