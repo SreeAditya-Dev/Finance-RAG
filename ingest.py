@@ -56,7 +56,7 @@ def embed_and_store(chunks, persist_directory: str = CHROMA_DB_DIR):
 
     print("Generating embeddings and initializing Chroma DB...")
     # Using NVIDIA NIM embedding model
-    embeddings = NVIDIAEmbeddings(model="NV-Embed-QA")
+    embeddings = NVIDIAEmbeddings(model="nvidia/nv-embedqa-e5-v5")
     
     # Store in ChromaDB, persisted to disk
     vectorstore = Chroma.from_documents(

@@ -14,7 +14,7 @@ def get_answer(query: str, persist_directory: str = CHROMA_DB_DIR, top_k: int = 
     and uses GPT-4o to generate a response.
     """
     # 1. Initialize Embeddings and Vector DB
-    embeddings = NVIDIAEmbeddings(model="NV-Embed-QA")
+    embeddings = NVIDIAEmbeddings(model="nvidia/nv-embedqa-e5-v5")
     
     # Check if vectorstore exists
     if not os.path.exists(persist_directory):

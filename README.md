@@ -48,7 +48,7 @@ Access the interactive API documentation at `http://localhost:8000/docs`.
 - **Chunk Size:** 1000 characters
 - **Chunk Overlap:** 200 characters
 - **Reason:** This chunk size is large enough to keep most financial tables and paragraphs intact without breaking context, while the 200-character overlap ensures no critical sentences are cut cleanly in half across chunks.
-- **Embeddings:** `NV-Embed-QA` (NVIDIA NIM API)
+- **Embeddings:** `nvidia/nv-embedqa-e5-v5` (NVIDIA NIM API)
 - **Vector DB:** ChromaDB (Persisted locally)
 - **LLM:** `meta/llama-3.1-70b-instruct` (NVIDIA NIM API)
 

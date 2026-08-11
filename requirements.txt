@@ -2,6 +2,7 @@ langchain
 langchain-community
 langchain-openai
 chromadb
+langchain-chroma
 pypdf
 streamlit
 python-dotenv

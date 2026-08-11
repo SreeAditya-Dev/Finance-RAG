@@ -67,7 +67,7 @@ async def get_stats():
         try:
             from langchain_chroma import Chroma
             from langchain_nvidia_ai_endpoints import NVIDIAEmbeddings
-            embeddings = NVIDIAEmbeddings(model="NV-Embed-QA")
+            embeddings = NVIDIAEmbeddings(model="nvidia/nv-embedqa-e5-v5")
             vectorstore = Chroma(persist_directory=CHROMA_DB_DIR, embedding_function=embeddings)
             total_chunks = len(vectorstore.get()["ids"])
         except Exception as e:
@@ -76,6 +76,6 @@ async def get_stats():
     return {
         "collection_name": "langchain",
         "total_chunks": total_chunks,
-        "embedding_model": "NV-Embed-QA (NVIDIA NIM)",
+        "embedding_model": "nvidia/nv-embedqa-e5-v5 (NVIDIA NIM)",
         "llm_model": "meta/llama-3.1-70b-instruct (NVIDIA NIM)"
     }
