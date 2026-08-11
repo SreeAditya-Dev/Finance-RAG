@@ -21,7 +21,6 @@ st.markdown("""
     /* Hide Streamlit branding */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    header {visibility: hidden;}
     
     /* Sidebar styling */
     [data-testid="stSidebar"] {
@@ -156,17 +155,27 @@ with col2:
 
         # Display assistant response in chat message container
         with st.chat_message("assistant"):
-            with st.spinner("Analyzing documents..."):
-                response = get_answer(prompt)
-                answer_text = response["answer"]
-                sources = response.get("sources", [])
+            status_container = st.status("🧠 Analyzing request...", expanded=True)
+            
+            def update_status(msg):
+                status_container.write(f"🔄 {msg}")
                 
+            response = get_answer(prompt, status_callback=update_status)
+            status_container.update(label="✅ Analysis complete!", state="complete", expanded=False)
+            
+            answer_stream = response.get("answer_stream")
+            sources = response.get("sources", [])
+            
+            if answer_stream:
+                answer_text = st.write_stream(answer_stream)
+            else:
+                answer_text = response.get("answer", "Error: Streaming failed")
                 st.markdown(answer_text)
-                
-                if sources:
-                    with st.expander("View Sources", expanded=False):
-                        for source in sources:
-                            st.markdown(f"<span class='source-badge'>📄 {source['file']} (Page {source['page']})</span>", unsafe_allow_html=True)
+            
+            if sources:
+                with st.expander("View Sources", expanded=False):
+                    for source in sources:
+                        st.markdown(f"<span class='source-badge'>📄 {source['file']} (Page {source['page']})</span>", unsafe_allow_html=True)
             
         # Add assistant response to chat history
         st.session_state.messages.append({

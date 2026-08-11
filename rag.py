@@ -8,11 +8,12 @@ load_dotenv()
 
 CHROMA_DB_DIR = "chroma_db"
 
-def get_answer(query: str, persist_directory: str = CHROMA_DB_DIR, top_k: int = 20):
+def get_answer(query: str, persist_directory: str = CHROMA_DB_DIR, top_k: int = 20, status_callback=None):
     """
     Retrieves the most relevant chunks for a given query from ChromaDB 
     and uses GPT-4o to generate a response.
     """
+    if status_callback: status_callback("Initializing embeddings & vector store...")
     # 1. Initialize Embeddings and Vector DB
     embeddings = NVIDIAEmbeddings(model="nvidia/nv-embedqa-e5-v5")
     
@@ -26,6 +27,7 @@ def get_answer(query: str, persist_directory: str = CHROMA_DB_DIR, top_k: int = 
     vectorstore = Chroma(persist_directory=persist_directory, embedding_function=embeddings)
     retriever = vectorstore.as_retriever(search_kwargs={"k": top_k})
 
+    if status_callback: status_callback("Retrieving relevant documents from database...")
     # 2. Retrieve relevant chunks
     retrieved_docs = retriever.invoke(query)
     
@@ -35,6 +37,7 @@ def get_answer(query: str, persist_directory: str = CHROMA_DB_DIR, top_k: int = 
             "sources": []
         }
 
+    if status_callback: status_callback(f"Found {len(retrieved_docs)} document chunks. Constructing context...")
     # 3. Construct context and sources
     context_text = "\n\n---\n\n".join([doc.page_content for doc in retrieved_docs])
     
@@ -53,6 +56,7 @@ def get_answer(query: str, persist_directory: str = CHROMA_DB_DIR, top_k: int = 
         if s not in unique_sources:
             unique_sources.append(s)
 
+    if status_callback: status_callback("Setting up LLM and generating response...")
     # 4. Set up the LLM (NVIDIA NIM Llama-3.1-70B) and System Prompt
     llm = ChatNVIDIA(model="meta/llama-3.1-70b-instruct", temperature=0.1, timeout=120)
 
@@ -71,12 +75,16 @@ def get_answer(query: str, persist_directory: str = CHROMA_DB_DIR, top_k: int = 
         ("human", "{question}"),
     ])
 
+    if status_callback: status_callback("Synthesizing final answer...")
     # 5. Generate Answer
     chain = prompt | llm
-    response = chain.invoke({"context": context_text, "question": query})
+    
+    def response_generator():
+        for chunk in chain.stream({"context": context_text, "question": query}):
+            yield chunk.content
 
     return {
-        "answer": response.content,
+        "answer_stream": response_generator(),
         "sources": unique_sources
     }
 
