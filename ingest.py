@@ -3,7 +3,7 @@ import glob
 from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_openai import OpenAIEmbeddings
+from langchain_nvidia_ai_endpoints import NVIDIAEmbeddings
 from langchain_chroma import Chroma
 
 # Load environment variables (API key)
@@ -55,8 +55,8 @@ def embed_and_store(chunks, persist_directory: str = CHROMA_DB_DIR):
         return None
 
     print("Generating embeddings and initializing Chroma DB...")
-    # Using the required model: text-embedding-3-small
-    embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
+    # Using NVIDIA NIM embedding model
+    embeddings = NVIDIAEmbeddings(model="NV-Embed-QA")
     
     # Store in ChromaDB, persisted to disk
     vectorstore = Chroma.from_documents(

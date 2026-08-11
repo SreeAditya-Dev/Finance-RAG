@@ -13,8 +13,7 @@ This repository contains a Retrieval-Augmented Generation (RAG) system built to 
 
 ### Prerequisites
 - Python 3.10+
-- OpenAI API Key (for embeddings)
-- NVIDIA API Key (for the Llama 3.1 70B LLM)
+- NVIDIA API Key (for embeddings and LLM)
 
 ### Installation
 1. Clone this repository:
@@ -30,7 +29,7 @@ This repository contains a Retrieval-Augmented Generation (RAG) system built to 
    ```bash
    cp .env.example .env
    ```
-   *Open `.env` and add your `OPENAI_API_KEY` and `NVIDIA_API_KEY`.*
+   *Open `.env` and add your `NVIDIA_API_KEY`.*
 
 ### Running the App
 **Option A: Streamlit UI**
@@ -49,7 +48,7 @@ Access the interactive API documentation at `http://localhost:8000/docs`.
 - **Chunk Size:** 1000 characters
 - **Chunk Overlap:** 200 characters
 - **Reason:** This chunk size is large enough to keep most financial tables and paragraphs intact without breaking context, while the 200-character overlap ensures no critical sentences are cut cleanly in half across chunks.
-- **Embeddings:** `text-embedding-3-small` (OpenAI)
+- **Embeddings:** `NV-Embed-QA` (NVIDIA NIM API)
 - **Vector DB:** ChromaDB (Persisted locally)
 - **LLM:** `meta/llama-3.1-70b-instruct` (NVIDIA NIM API)
 
