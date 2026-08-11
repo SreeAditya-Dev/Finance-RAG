@@ -15,6 +15,7 @@ venv.bak/
 # Project specifics
 chroma_db/
 data/
+.streamlit/
 
 # OS generated files
 .DS_Store
