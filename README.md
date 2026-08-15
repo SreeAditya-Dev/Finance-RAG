@@ -45,6 +45,37 @@ uvicorn api.main:app --reload
 ```
 Access the interactive API documentation at `http://localhost:8000/docs`.
 
+## 🏗️ System Architecture
+
+![Finance RAG System Architecture](Docs/architecture_diagram.png)
+
+```mermaid
+flowchart LR
+    subgraph S1["1. Data Ingestion"]
+        PDF["📄 PDF Financial Reports<br/>(TSLA Q1-Q4 2023)"] --> Loader["⚙️ PyPDF Loader"]
+        Loader --> Splitter["✂️ Text Splitter<br/>(1000 char / 200 overlap)"]
+        Splitter --> Embedder["⚡ NVIDIA NIM<br/>nv-embedqa-e5-v5"]
+    end
+
+    subgraph S2["2. Storage & Retrieval"]
+        Embedder --> Chroma[("💾 ChromaDB<br/>Vector Store")]
+        Query["❓ User Question"] --> QEmbed["⚡ Query Embedding"]
+        QEmbed --> Retriever["🔍 Similarity Search<br/>(Top-K Chunks)"]
+        Chroma <--> Retriever
+    end
+
+    subgraph S3["3. Generation & Grounding"]
+        Retriever --> Context["📑 Context & Sources"]
+        Context --> Prompt["📝 Prompt Template<br/>(Investment Desk Persona)"]
+        Prompt --> LLM["🤖 NVIDIA NIM<br/>Meta Llama-3.1-70B"]
+    end
+
+    subgraph S4["4. Client Interfaces"]
+        LLM --> Streamlit["🖥️ Streamlit App<br/>(Streaming & Badges)"]
+        LLM --> FastAPI["🚀 FastAPI REST API<br/>(/ingest, /ask, /stats)"]
+    end
+```
+
 ## ⚙️ Technical Details
 - **Chunk Size:** 1000 characters
 - **Chunk Overlap:** 200 characters
