@@ -84,9 +84,12 @@ flowchart LR
 - **Vector DB:** ChromaDB (Persisted locally)
 - **LLM:** `meta/llama-3.1-70b-instruct` (NVIDIA NIM API)
 
-## 📸 Screenshots
-- **Streamlit Interface & Indexing:** Interactive UI with document upload, chunk count tracker, streaming responses, and expandable source citations with file names & page numbers.
-- **FastAPI Documentation:** Swagger UI at `http://localhost:8000/docs` with endpoints `/ingest`, `/ask`, and `/stats`.
+## 📸 Application Interface
+
+![Finance RAG Application Interface](Docs/video_preview.jpg)
+
+- **Streamlit Interactive UI:** Features real-time indexing status, vector store chunk count stats, streamed natural language responses, and expandable source badges detailing document origin & page numbers.
+- **FastAPI Backend Documentation:** Interactive Swagger UI available at `http://localhost:8000/docs` with endpoints `/ingest`, `/ask`, and `/stats`.
 
 ## 🧪 Test Questions & Answers
 *(Generated directly via the RAG pipeline powered by NVIDIA NIM Llama-3.1-70B and `nv-embedqa-e5-v5` over Tesla FY23 quarterly reports)*
@@ -157,5 +160,10 @@ flowchart LR
 - **FastAPI / Streamlit Streaming Coordination:** Streamlit uses generator objects via `st.write_stream`, whereas standard FastAPI JSON responses require evaluating generators into complete string payloads.
 
 ## 🎥 Demo Video
-- 📺 **Watch Demo Video:** [Finance RAG Application Walkthrough & Demo](https://res.cloudinary.com/dukjtmdtn/video/upload/v1786784336/Screen_Recording_2026-08-15_142015_wsvg6i.mp4)
+
+[![Finance RAG Video Walkthrough Preview](Docs/video_preview.jpg)](https://res.cloudinary.com/dukjtmdtn/video/upload/v1786784336/Screen_Recording_2026-08-15_142015_wsvg6i.mp4)
+
+> 📺 **Click the image above to watch the full application walkthrough & demo.**
+> 
+> Direct Video Link: [https://res.cloudinary.com/dukjtmdtn/video/upload/v1786784336/Screen_Recording_2026-08-15_142015_wsvg6i.mp4](https://res.cloudinary.com/dukjtmdtn/video/upload/v1786784336/Screen_Recording_2026-08-15_142015_wsvg6i.mp4)
 
