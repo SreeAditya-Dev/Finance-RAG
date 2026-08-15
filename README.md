@@ -1,6 +1,8 @@
 # Finance RAG - Quarterly Financial Reports
 
-This repository contains a Retrieval-Augmented Generation (RAG) system built to answer questions based on quarterly financial reports. 
+This repository contains an enterprise Retrieval-Augmented Generation (RAG) system built to analyze and answer natural language queries across quarterly financial reports.
+
+> 📄 **Complete Project PDF Report:** [Finance_RAG_Project_Documentation.pdf](Docs/Finance_RAG_Project_Documentation.pdf) — Comprehensive 4-page executive report detailing the *Why*, *What*, System Architecture, Technical Pipeline, 10-Question Benchmark, and Engineering Insights.
 
 ## 🏢 Company & Data Sources
 - **Company Chosen:** **Tesla, Inc. (TSLA)** — FY 2023 Quarterly Shareholder Updates
