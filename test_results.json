@@ -1,0 +1,364 @@
+[
+  {
+    "question_num": 1,
+    "question": "What was total revenue in the most recent quarter you loaded?",
+    "answer": "The most recent quarter loaded is Q4 2023. Total revenue in Q4 2023 was $25,167 million.",
+    "sources": [
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 5
+      },
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 5
+      },
+      {
+        "file": "TSLA-Q4-2023.pdf",
+        "page": 6
+      },
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 5
+      },
+      {
+        "file": "TSLA-Q4-2023.pdf",
+        "page": 4
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 4
+      },
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 4
+      },
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "question_num": 2,
+    "question": "Compare net profit across all the quarters you loaded. Which was highest?",
+    "answer": "Based on the provided context, the net income (profit) for each quarter is as follows:\n\n- Q2-2020: $2,269\n- Q3-2020: $3,331\n- Q4-2020: $3,707\n- Q1-2021: $2,539\n- Q2-2021: $2,464\n- Q3-2021: $3,603\n- Q4-2021: $2,664\n- Q1-2022: $3,280\n- Q2-2022: $2,703\n- Q3-2022: $2,614\n- Q1-2023: $2,259\n- Q2-2023: $2,7B (GAAP net income) and $3.1B (non-GAAP net income)\n\nComparing the net profit across all the quarters, the highest net income was $3,707 in Q4-2020.",
+    "sources": [
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 5
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 3
+      },
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 19
+      },
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 5
+      },
+      {
+        "file": "TSLA-Q4-2023.pdf",
+        "page": 5
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 21
+      },
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "question_num": 3,
+    "question": "How did revenue in the latest quarter compare with the same quarter of the previous year?",
+    "answer": "Revenue in the latest quarter (Q4) grew 3% year-over-year (YoY) to $25.2B.",
+    "sources": [
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 5
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 5
+      },
+      {
+        "file": "TSLA-Q4-2023.pdf",
+        "page": 4
+      },
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 25
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 26
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 4
+      },
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 23
+      },
+      {
+        "file": "TSLA-Q4-2023.pdf",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "question_num": 4,
+    "question": "What did management say about the demand outlook or business environment?",
+    "answer": "Management mentioned that they are focusing on various aspects to ensure long-term success, despite the challenges of uncertain times. They also mentioned that they believe they have the right ingredients for long-term success through various high-potential projects. However, they did not provide a specific demand outlook or detailed description of the business environment.",
+    "sources": [
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 28
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 3
+      },
+      {
+        "file": "TSLA-Q4-2023.pdf",
+        "page": 31
+      },
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 25
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 26
+      },
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 2
+      },
+      {
+        "file": "TSLA-Q4-2023.pdf",
+        "page": 2
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "question_num": 5,
+    "question": "Which business segment or geography grew fastest, and by how much?",
+    "answer": "The information available indicates that Energy Storage deployments increased by 90% YoY in Q3.",
+    "sources": [
+      {
+        "file": "TSLA-Q4-2023.pdf",
+        "page": 9
+      },
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 7
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 7
+      },
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 7
+      },
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 9
+      },
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 9
+      },
+      {
+        "file": "TSLA-Q4-2023.pdf",
+        "page": 12
+      }
+    ]
+  },
+  {
+    "question_num": 6,
+    "question": "What was the operating margin in each quarter, and is the trend rising or falling?",
+    "answer": "The information is not available in the uploaded documents for all quarters. However, the operating margin for the following quarters is available:\n\n- Q3: 7.6%\n- Q2: 9.6%\n\nThe trend is falling, as the operating margin decreased from 9.6% in Q2 to 7.6% in Q3.",
+    "sources": [
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 18
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 19
+      },
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 21
+      },
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 5
+      },
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 10
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 5
+      },
+      {
+        "file": "TSLA-Q4-2023.pdf",
+        "page": 31
+      },
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 3
+      }
+    ]
+  },
+  {
+    "question_num": 7,
+    "question": "Was any dividend declared? State the amount per share and the record date.",
+    "answer": "The information is not available in the uploaded documents.",
+    "sources": [
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 26
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 24
+      },
+      {
+        "file": "TSLA-Q4-2023.pdf",
+        "page": 29
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 4
+      },
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 4
+      },
+      {
+        "file": "TSLA-Q4-2023.pdf",
+        "page": 28
+      },
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 23
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "question_num": 8,
+    "question": "What risks, headwinds, or challenges are mentioned in the documents?",
+    "answer": "The documents mention the following risks, headwinds, or challenges:\n\n1. Risks relating to product financing programs.\n2. The status of government and economic incentives for electric vehicles and energy products.\n3. Ability to attract, hire, and retain key employees and qualified personnel.\n4. Ability to maintain the security of information and production and product systems.\n5. Compliance with various regulations and laws applicable to operations and products.\n6. Risks relating to indebtedness and financing strategies.\n7. Adverse foreign exchange movements.\n8. Ability to procure supply of battery cells, including through own manufacturing.\n9. Risks relating to international expansion.\n10. Failures by Tesla products to perform as expected or product recalls.\n11. Risk of product liability claims.\n12. Competition in the automotive and energy product markets.\n13. Ability to maintain public credibility and confidence in long-term business prospects.\n14. Ability to effectively manage growth, particularly in charging capabilities.\n15. Consumers' demand for electric vehicles generally and Tesla vehicles specifically.\n16. Ability of suppliers to deliver components according to schedules, prices, quality, and volumes acceptable to Tesla.\n17. Issues with lithium-ion cells or other components manufactured at Tesla's factories.\n18. Ability to ramp factories in accordance with plans.",
+    "sources": [
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 26
+      },
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 28
+      },
+      {
+        "file": "TSLA-Q4-2023.pdf",
+        "page": 31
+      },
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 25
+      }
+    ]
+  },
+  {
+    "question_num": 9,
+    "question": "Give me a three-line summary of the latest quarter for a client email.",
+    "answer": "Here's a three-line summary of the latest quarter (Q3 2023) for a client email:\n\nTesla reported a 9% year-over-year (YoY) increase in total revenue to $23.4 billion in Q3 2023, driven by growth in vehicle deliveries and other parts of the business. The company's operating income decreased YoY to $1.8 billion, resulting in a 7.6% operating margin. Despite this, Tesla's non-GAAP net income reached $2.3 billion in Q3, with the company continuing to focus on reducing cost per vehicle and investing in growth projects.",
+    "sources": [
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 25
+      },
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 1
+      },
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 5
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 1
+      },
+      {
+        "file": "TSLA-Q4-2023.pdf",
+        "page": 1
+      },
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 3
+      },
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 1
+      },
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 19
+      }
+    ]
+  },
+  {
+    "question_num": 10,
+    "question": "What is the CEO's personal shareholding in 2015? (Trap Question)",
+    "answer": "The information is not available in the uploaded documents.",
+    "sources": [
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 4
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 4
+      },
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 23
+      },
+      {
+        "file": "TSLA-Q4-2023.pdf",
+        "page": 28
+      },
+      {
+        "file": "TSLA-Q3-2023.pdf",
+        "page": 20
+      },
+      {
+        "file": "TSLA-Q2-2023.pdf",
+        "page": 21
+      },
+      {
+        "file": "TSLA-Q1-2023.pdf",
+        "page": 26
+      }
+    ]
+  }
+]

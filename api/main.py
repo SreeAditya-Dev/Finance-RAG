@@ -54,6 +54,12 @@ async def ask_question(request: AskRequest):
     Endpoint to ask a question and retrieve the answer along with sources.
     """
     response = get_answer(request.question, top_k=request.top_k)
+    if "answer_stream" in response:
+        answer_text = "".join(list(response["answer_stream"]))
+        return {
+            "answer": answer_text,
+            "sources": response.get("sources", [])
+        }
     return response
 
 @app.get("/stats")
