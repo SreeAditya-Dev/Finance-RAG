@@ -126,5 +126,5 @@ Access the interactive API documentation at `http://localhost:8000/docs`.
 - **FastAPI / Streamlit Streaming Coordination:** Streamlit uses generator objects via `st.write_stream`, whereas standard FastAPI JSON responses require evaluating generators into complete string payloads.
 
 ## 🎥 Demo Video
-- `[Insert link to your 3-minute YouTube/Loom demo video]`
+- 📺 **Watch Demo Video:** [Finance RAG Application Walkthrough & Demo](https://res.cloudinary.com/dukjtmdtn/video/upload/v1786784336/Screen_Recording_2026-08-15_142015_wsvg6i.mp4)
 
